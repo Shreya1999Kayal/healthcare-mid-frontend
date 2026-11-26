@@ -1,0 +1,16 @@
+/* Blood donation theme (blood bank, donor, camp): red and white*/
+  
+@theme {
+  --color-blood-primary: #c03333;
+  --color-blood-primary-dark: #431111;
+  --color-blood-accent: #824545;
+
+  --color-blood-navy: #3a1414;
+
+  --color-blood-bg: #f1b0b0;
+  --color-blood-bg-soft: #fde0e0;
+
+  --color-blood-muted: #7a6262;
+  --color-blood-border: #f3c4c4;
+}
+

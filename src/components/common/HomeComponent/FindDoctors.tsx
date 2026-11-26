@@ -2,12 +2,13 @@ import { Button, Typography } from "@mui/material"
 import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import DoctorCard from "./DoctorCard"
-import { doctorsList, Home_Doctors_Count } from "../../../constants/doctors.constants"
+import { doctorsList, HOME_DOCTORS_COUNT } from "../../../constants/public/doctors.constants"
+import { hoverGradient, primaryGradient } from "../../../constants/public/ui.constants"
 
 
 const FindDoctors = () => {
 
-  const featuredDoctors = doctorsList.slice(0, Home_Doctors_Count)
+  const featuredDoctors = doctorsList.slice(0, HOME_DOCTORS_COUNT)
 
   return (
     <section className="w-full bg-medical-bg px-6 py-16 md:px-16">
@@ -43,8 +44,8 @@ const FindDoctors = () => {
           sx={{
             borderRadius: 999,
             px: 4,
-            background: "linear-gradient(135deg, #16C7D9 0%, #08AFC3 100%)",
-            "&:hover": { background: "linear-gradient(135deg, #08AFC3 0%, #30345F 100%)" },
+            background: primaryGradient,
+            "&:hover": { background: hoverGradient },
           }}
         >
           See more

@@ -3,6 +3,7 @@ import React from 'react'
 
 import { RouterProvider } from 'react-router-dom'
 import { CssBaseline, ThemeProvider } from '@mui/material'
+import { Toaster } from 'sonner'
 import theme from './theme/public.theme'
 import Routes from './routes/PublicRoutes'
 
@@ -14,8 +15,9 @@ function App() {
     <React.Fragment>
 
       <ThemeProvider theme={theme}>
-         <CssBaseline/>  {/*//to convert mui to normal css */}
+         <CssBaseline/>  {/*resets browser default styles //to convert mui to normal css */}
       
+      <Toaster richColors position="top-center" />
       <RouterProvider router={Routes}/>
 
       </ThemeProvider>

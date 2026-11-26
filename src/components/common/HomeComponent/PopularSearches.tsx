@@ -59,7 +59,7 @@ const categories: Category[] = [
         path: "/hospitals",
         items: [
             { label: "Multi-speciality", icon: Hospital },
-            { label: "Emergency & trauma", icon: Siren },
+            { label: "Emergency", icon: Siren },
             { label: "Children's", icon: Baby },
             { label: "Eye care", icon: Eye },
             { label: "NABH accredited", icon: ShieldCheck },
@@ -69,7 +69,7 @@ const categories: Category[] = [
     {
         id: "blood-banks",
         label: "Blood banks",
-        path: "/blood-banks",
+        path: "/blood?tab=blood-banks",
         items: [
             { label: "Near me", icon: MapPin },
             { label: "Open 24x7", icon: Clock },
@@ -81,7 +81,7 @@ const categories: Category[] = [
     {
         id: "donors",
         label: "Blood donors",
-        path: "/donors",
+        path: "/blood?tab=donors",
         items: [
             { label: "A+", icon: Droplet },
             { label: "B+", icon: Droplet },
@@ -93,7 +93,7 @@ const categories: Category[] = [
     {
         id: "camps",
         label: "Blood camps",
-        path: "/blood-camps",
+        path: "/blood?tab=camps",
         items: [
             { label: "Camps near me", icon: MapPin },
             { label: "This week", icon: CalendarDays },
@@ -105,7 +105,7 @@ const categories: Category[] = [
     {
         id: "emergency",
         label: "Emergency",
-        path: "/emergency",
+        path: "/hospitals",
         items: [
             { label: "Ambulance", icon: Ambulance },
             { label: "ICU beds", icon: BedDouble },
@@ -132,9 +132,14 @@ const PopularSearches = () => {
 
     const handleChipClick = (index: number, label: string) => {
         setSelected(index)
-        navigate(`${activeCategory.path}?search=${encodeURIComponent(label)}`)
-    }
 
+        // Only the Doctors and Hospitals pages filter by a search word
+        if (activeCategory.id === "doctors" || activeCategory.id === "hospitals") {
+            navigate(`${activeCategory.path}?search=${label}`)
+        } else {
+            navigate(activeCategory.path)
+        }
+    }
     return (
         <section className="w-full bg-linear-to-b from-white to-medical-bg px-6 py-16 md:px-16">
             <Typography
@@ -211,3 +216,6 @@ const PopularSearches = () => {
 }
 
 export default PopularSearches
+
+
+

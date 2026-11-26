@@ -1,0 +1,12 @@
+@theme {
+  --color-hospital-primary: #2a7b9b;
+  --color-hospital-primary-dark: #1f5f78;
+
+  --color-hospital-navy: #17384a;
+
+  --color-hospital-bg: #e8f3f7;
+  --color-hospital-bg-soft: #d3e8f0;
+
+  --color-hospital-muted: #5b6b7b;
+  --color-hospital-border: #b9d8e4;
+}

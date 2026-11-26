@@ -2,7 +2,8 @@ import { useState } from "react"
 import { Typography } from "@mui/material"
 import { ArrowRight, Droplet } from "lucide-react"
 import { Link } from "react-router-dom"
-import type { BloodCardProps } from "../../../types/interface/Blood.interface"
+import type { BloodCardProps } from "../../../types/interface/public/Blood.interface"
+
 
 
 const BloodCard = ({ service }: BloodCardProps) => {

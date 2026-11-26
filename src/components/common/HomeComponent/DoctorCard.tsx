@@ -1,18 +1,12 @@
 import { useState } from "react"
 import { Typography } from "@mui/material"
 import { Link } from "react-router-dom"
-import type { DoctorCardProps } from "../../../types/interface/Doctor.interface"
+import type { DoctorCardProps } from "../../../types/interface/public/Doctor.interface"
+import { getInitials } from "../../../services/helper/public/doctor.helper" 
+
 
 // "Dr. Leslie Alexander" -> "LA"
-const getInitials = (name: string) =>
-  name
-    .replace("Dr.", "")
-    .trim()
-    .split(" ")
-    .map((word) => word[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase()
+
 
 const DoctorCard = ({ doctor }: DoctorCardProps) => {
   const [imageFailed, setImageFailed] = useState(false)

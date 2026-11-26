@@ -2,10 +2,10 @@ import { useState } from "react"
 import { Button, Typography } from "@mui/material"
 import { Hospital as HospitalIcon, MapPin, Star } from "lucide-react"
 import { Link } from "react-router-dom"
-import type { HospitalCardProps } from "../../../types/interface/Hospital.interface"
+import type { HospitalCardProps } from "../../../types/interface/public/Hospital.interface"
+import { hoverGradient, primaryGradient } from "../../../constants/public/ui.constants"
 
-const primaryGradient = "linear-gradient(135deg, #16C7D9 0%, #08AFC3 100%)"
-const hoverGradient = "linear-gradient(135deg, #08AFC3 0%, #30345F 100%)"
+
 
 const HospitalCard = ({ hospital }: HospitalCardProps) => {
   const [imageFailed, setImageFailed] = useState(false)

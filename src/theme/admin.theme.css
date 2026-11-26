@@ -1,0 +1,13 @@
+/* Admin theme: indigo and white */
+@theme {
+  --color-admin-primary: #4338ca;
+  --color-admin-primary-dark: #312e81;
+
+  --color-admin-navy: #1e1b4b;
+
+  --color-admin-bg: #eef0fb;
+  --color-admin-bg-soft: #dfe3f8;
+
+  --color-admin-muted: #5b6275;
+  --color-admin-border: #c7cdee;
+}

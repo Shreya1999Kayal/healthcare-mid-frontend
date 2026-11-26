@@ -1,0 +1,13 @@
+@theme {
+  --color-doctor-primary: #0891a6;
+  --color-doctor-primary-dark: #066b7c;
+
+  --color-doctor-navy: #1e2142;
+  --color-doctor-navy-dark: #12142b;
+
+  --color-doctor-bg: #e3f1f3;
+  --color-doctor-bg-soft: #cfe6ea;
+
+  --color-doctor-muted: #55657a;
+  --color-doctor-border: #b5d6db;
+}

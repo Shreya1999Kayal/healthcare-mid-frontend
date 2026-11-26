@@ -1,0 +1,13 @@
+/* Patient theme: green and white */
+@theme {
+  --color-patient-primary: #0f9d76;
+  --color-patient-primary-dark: #0b7a5c;
+
+  --color-patient-navy: #123b31;
+
+  --color-patient-bg: #eaf7f2;
+  --color-patient-bg-soft: #d3efe4;
+
+  --color-patient-muted: #567068;
+  --color-patient-border: #b8e0d1;
+}

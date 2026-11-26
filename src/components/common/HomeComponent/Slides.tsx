@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react"
 import { Box, Button, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
-import type { SlidesProps, VideoSlideProps } from "../../../types/interface/Slides.interface"
+import type { SlidesProps, VideoSlideProps } from "../../../types/interface/public/Slides.interface"
+import { hoverGradient, primaryGradient } from "../../../constants/public/ui.constants"
+
 
 const VideoSlide = ({ src, isActive }: VideoSlideProps) => {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -72,15 +74,15 @@ const Slides = ({ slides, current }: SlidesProps) => {
                 </Typography>
                 <Button
                   component={Link}
-                  to="/Signup"
+                  to="/signup"
                   variant="contained"
                   size="large"
                   disableElevation
                   sx={{
                     borderRadius: 999,
                     px: 4,
-                    background: "linear-gradient(135deg, #16C7D9 0%, #08AFC3 100%)",
-                    "&:hover": { background: "linear-gradient(135deg, #08AFC3 0%, #30345F 100%)" },
+                    background: primaryGradient,
+                    "&:hover": { background: hoverGradient },
                   }}
                 >
                   Get started

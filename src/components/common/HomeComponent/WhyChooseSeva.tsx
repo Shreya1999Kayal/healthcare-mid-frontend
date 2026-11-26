@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Button, Typography } from "@mui/material"
 import { CircleCheck, HeartPulse } from "lucide-react"
 import { Link } from "react-router-dom"
+import { hoverGradient, primaryGradient } from "../../../constants/public/ui.constants"
 
 const reasons = [
   "Doctors, hospitals and blood banks together in one place",
@@ -64,15 +65,15 @@ const WhyChooseSeva = () => {
 
           <Button
             component={Link}
-            to="/Signup"
+            to="/signup"
             variant="contained"
             size="large"
             disableElevation
             sx={{
               borderRadius: 999,
               px: 4,
-              background: "linear-gradient(135deg, #16C7D9 0%, #08AFC3 100%)",
-              "&:hover": { background: "linear-gradient(135deg, #08AFC3 0%, #30345F 100%)" },
+              background: primaryGradient,
+              "&:hover": { background: hoverGradient },
             }}
           >
             Get started

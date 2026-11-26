@@ -2,8 +2,9 @@
 import { Button, Typography } from "@mui/material"
 import { ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
-import { bloodServices } from "../../../constants/bloods.constants"
+import { bloodServices } from "../../../constants/public/bloods.constants"
 import BloodCard from "./BloodCard"
+import { hoverGradient, primaryGradient } from "../../../constants/public/ui.constants"
 
 
 const FindBlood = () => {
@@ -41,8 +42,8 @@ const FindBlood = () => {
           sx={{
             borderRadius: 999,
             px: 4,
-            background: "linear-gradient(135deg, #16C7D9 0%, #08AFC3 100%)",
-            "&:hover": { background: "linear-gradient(135deg, #08AFC3 0%, #30345F 100%)" },
+            background: primaryGradient,
+            "&:hover": { background:  hoverGradient},
           }}
         >
           Explore blood services

@@ -1,4 +1,10 @@
+
 @import "tailwindcss";
+@import "./theme/doctor.theme.css";
+@import "./theme/hospital.theme.css";
+@import "./theme/bloodDonation.theme.css";
+@import "./theme/admin.theme.css";
+@import "./theme/patient.theme.css";
 
 
 @theme {
@@ -13,3 +19,28 @@
   --color-medical-muted: #64748b;
   --color-medical-border: #cdecef;
 }
+
+
+
+
+
+
+
+
+/* Prescription print: only the .print-area is printed */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+

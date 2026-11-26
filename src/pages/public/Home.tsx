@@ -5,7 +5,7 @@ import PopularSearches from "../../components/common/HomeComponent/PopularSearch
 import FindCareSteps from "../../components/common/HomeComponent/FindCareSteps"
 import WhyChooseSeva from "../../components/common/HomeComponent/WhyChooseSeva"
 import Slides from "../../components/common/HomeComponent/Slides"
-import { slides, SLIDE_DURATION } from "../../constants/slides.constants"
+import { slides, SLIDE_DURATION } from "../../constants/public/slides.constants"
 import FindDoctors from "../../components/common/HomeComponent/FindDoctors"
 import FindHospitals from "../../components/common/HomeComponent/FindHospitals"
 import FindBlood from "../../components/common/HomeComponent/FindBlood"

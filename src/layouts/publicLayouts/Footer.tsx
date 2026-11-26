@@ -5,16 +5,15 @@ import { Link } from "react-router-dom"
 const careLinks = [
   { label: "Find doctors", to: "/doctors" },
   { label: "Hospitals", to: "/hospitals" },
-  { label: "Blood banks", to: "/blood-banks" },
-  { label: "Blood donors", to: "/donors" },
-  { label: "Blood camps", to: "/blood-camps" },
-  { label: "Emergency help", to: "/emergency" },
+  { label: "Blood banks", to: "/blood?tab=blood-banks" },
+  { label: "Blood donors", to: "/blood?tab=donorss" },
+  { label: "Blood camps", to: "/blood?tab=camps" },
+  { label: "Emergency help", to: "/hospitals?search=Emergency" },
 ]
 
 const companyLinks = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
-  { label: "News", to: "/news" },
   { label: "About us", to: "/about" },
   { label: "Contact us", to: "/contact" },
 ]
@@ -90,14 +89,6 @@ const Footer = () => {
       {/* Bottom bar */}
       <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-sm text-white/60 md:flex-row">
         <p>© {new Date().getFullYear()} Seva. All rights reserved.</p>
-        <div className="flex gap-6">
-          <Link to="/privacy" className="transition-colors hover:text-medical-primary">
-            Privacy policy
-          </Link>
-          <Link to="/terms" className="transition-colors hover:text-medical-primary">
-            Terms of use
-          </Link>
-        </div>
       </div>
     </footer>
   )
